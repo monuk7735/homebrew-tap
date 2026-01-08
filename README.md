@@ -31,4 +31,5 @@ The following packages are available through this tap:
 
 | Cask | Description |
 | ---- | ----------- |
-| [mew-notch](Casks/mewnotch.rb) | MewNotch - Utilities and styling for the MacBook notch |
+| [mew-notch](Casks/mew-notch.rb) | MewNotch - Utilities and styling for the MacBook notch |
+| [sentry](Casks/sentry.rb) | Sentry - Secure your workflow without stopping it |
