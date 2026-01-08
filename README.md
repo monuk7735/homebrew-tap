@@ -23,3 +23,12 @@ brew tap monuk7735/tap
 ```
 
 Then you can install a cask by running `brew install --cask <cask>`.
+
+
+## Available Packages
+
+The following packages are available through this tap:
+
+| Cask | Description |
+| ---- | ----------- |
+| [mew-notch](Casks/mewnotch.rb) | MewNotch - Utilities and styling for the MacBook notch |
