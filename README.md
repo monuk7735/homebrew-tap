@@ -24,7 +24,6 @@ brew tap monuk7735/tap
 
 Then you can install a cask by running `brew install --cask <cask>`.
 
-
 ## Available Packages
 
 The following packages are available through this tap:
