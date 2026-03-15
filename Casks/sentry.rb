@@ -1,7 +1,7 @@
 
 cask "sentry" do
-  version "1.3"
-  sha256 "9428dce0ddfe93b500a92b71719170228524091ac3c9cdfaa558363529b660c3"
+  version "1.4"
+  sha256 "f741c73ae2e270c9b7213b5b8f18d881cf5a866124af685e89becc9909b335f6"
 
   url "https://github.com/monuk7735/sentry/releases/download/v#{version}/Sentry-v#{version}.dmg",
       verified: "github.com/monuk7735/sentry/"
@@ -17,6 +17,10 @@ cask "sentry" do
   depends_on macos: ">= :ventura"
 
   app "Sentry.app"
+
+  postflight do
+    system_command "xattr", args: ["-cr", "#{appdir}/Sentry.app"]
+  end
 
   zap trash: [
     "~/Library/Application Support/Sentry",
