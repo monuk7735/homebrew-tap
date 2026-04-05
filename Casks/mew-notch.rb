@@ -1,7 +1,7 @@
 
 cask "mew-notch" do
-  version "2.2.0"
-  sha256 "a020b0480dbe4536e32bdce3f2fd07edc4feb4af0b3246b5e0129afd18928629"
+  version "2.2.1"
+  sha256 "ebbc21cbbf4acf84c9b4871a76a3a660911a2a82b80e22f081c24c87a297f689"
 
   url "https://github.com/monuk7735/mew-notch/releases/download/#{version}/MewNotch-#{version}.dmg",
       verified: "github.com/monuk7735/mew-notch/"
@@ -17,6 +17,10 @@ cask "mew-notch" do
   depends_on macos: ">= :sonoma"
 
   app "MewNotch.app"
+
+  postflight do
+    system_command "xattr", args: ["-cr", "#{appdir}/MewNotch.app"]
+  end
 
   zap trash: [
     "~/Library/Application Support/MewNotch",
