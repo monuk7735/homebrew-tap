@@ -1,7 +1,7 @@
 
 cask "sentry" do
-  version "1.5"
-  sha256 "a9d20c864aca1a9e528eb1c06a6c49cbc99f254889dfde4b35d4f68cc80a5a53"
+  version "1.6"
+  sha256 "b3612614ec1df14b60c7e0d1cd6dacbf7150d331365e46cc7c8a5145e305c5cd"
 
   url "https://github.com/monuk7735/sentry/releases/download/v#{version}/Sentry-v#{version}.dmg",
       verified: "github.com/monuk7735/sentry/"
