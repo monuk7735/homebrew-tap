@@ -1,7 +1,6 @@
-
 cask "mew-notch" do
-  version "2.2.2"
-  sha256 "4af6dabf1bc78447b9403a4d4366f82fd57e1031cbcf3fcee1438d600d88ec47"
+  version "2.2.3"
+  sha256 "7d47a40a822f3f1aa1ec579b78af3e502dba7338b33f5f632d958efc1439b6ef"
 
   url "https://github.com/monuk7735/mew-notch/releases/download/#{version}/MewNotch-#{version}.dmg",
       verified: "github.com/monuk7735/mew-notch/"
@@ -14,7 +13,7 @@ cask "mew-notch" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "MewNotch.app"
 
@@ -25,6 +24,6 @@ cask "mew-notch" do
   zap trash: [
     "~/Library/Application Support/MewNotch",
     "~/Library/Preferences/com.monuk7735.mew-notch.plist",
-    "~/Library/Saved Application State/com.monuk7735.mew-notch.savedState"
+    "~/Library/Saved Application State/com.monuk7735.mew-notch.savedState",
   ]
 end
