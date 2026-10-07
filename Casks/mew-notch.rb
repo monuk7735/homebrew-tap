@@ -5,7 +5,7 @@ cask "mew-notch" do
   url "https://github.com/monuk7735/mew-notch/releases/download/#{version}/MewNotch-#{version}.dmg",
       verified: "github.com/monuk7735/mew-notch/"
   name "MewNotch"
-  desc "Transform that empty space into a powerful, dynamic dashboard. Control media, monitor system stats, and access files instantly"
+  desc "Transform your MacBook notch into a dynamic dashboard and media HUD"
   homepage "https://monuk7735.github.io/mew-notch/"
 
   livecheck do
@@ -17,8 +17,8 @@ cask "mew-notch" do
 
   app "MewNotch.app"
 
-  postflight do
-    system_command "xattr", args: ["-cr", "#{appdir}/MewNotch.app"]
+  postflight_steps do
+    run "xattr", "-cr", "MewNotch.app"
   end
 
   zap trash: [
