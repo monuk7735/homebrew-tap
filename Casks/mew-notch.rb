@@ -18,7 +18,7 @@ cask "mew-notch" do
   app "MewNotch.app"
 
   postflight_steps do
-    run "xattr", "-cr", "MewNotch.app"
+    run "/usr/bin/xattr", args: ["-cr", "{{appdir}}/MewNotch.app"]
   end
 
   zap trash: [

@@ -19,7 +19,7 @@ cask "sentry" do
   binary "#{appdir}/Sentry.app/Contents/Resources/sentry-cli"
 
   postflight_steps do
-    run "xattr", "-cr", "Sentry.app"
+    run "/usr/bin/xattr", args: ["-cr", "{{appdir}}/Sentry.app"]
   end
 
   zap trash: [
